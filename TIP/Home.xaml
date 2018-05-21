@@ -1,0 +1,25 @@
+﻿<Window x:Class="TIP.Home"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TIP"
+        mc:Ignorable="d"
+        Title="Home" Height="600" Width="800">
+    <Grid>
+        <Button x:Name="logout" Content="Log out" Margin="650,10,20,0" VerticalAlignment="Top" Width="110" Height="35" Background="#FF96DCFF" FontFamily="Script MT Bold" FontSize="20" BorderThickness="1" Click="logout_Click"/>
+        <TextBox x:Name="searchbox" VerticalContentAlignment="Center" HorizontalAlignment="Left" Height="35" Margin="10,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="290">
+            <TextBox.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="10"/>
+                </Style>
+            </TextBox.Resources>
+        </TextBox>
+        <Button x:Name="searchbutton" Content="Search" Margin="305,10,375,0" VerticalAlignment="Top" Height="35" Background="#FF96C8FF" FontFamily="Script MT Bold" FontSize="20" BorderThickness="1" Click="searchbutton_Click"/>
+
+        <ListBox x:Name="listBox" HorizontalAlignment="Left" Height="488" VerticalAlignment="Top" Width="756" Margin="10,71,0,0" SelectionChanged="listBox_SelectionChanged"/>
+        <Button x:Name="my_profile" Content="Profile" Margin="539,10,141,0" VerticalAlignment="Top" Height="35" Background="#FF96C8FF" FontFamily="Script MT Bold" FontSize="20" BorderThickness="1" Click="my_profile_Click"/>
+        <Button x:Name="my_home" Content="My Home" Margin="422,10,258,0" VerticalAlignment="Top" Height="35" Background="#FF96C8FF" FontFamily="Script MT Bold" FontSize="20" BorderThickness="1" Click="my_home_Click"/>
+
+    </Grid>
+</Window>

@@ -1,0 +1,63 @@
+﻿<Window x:Class="TIP.Profile"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TIP"
+        mc:Ignorable="d"
+        Title="Profile" Height="600" Width="800">
+    <Grid>
+        <Button x:Name="logout" Content="Log out" Margin="650,10,20,0" VerticalAlignment="Top" Width="110" Height="35" Background="#FF96DCFF" FontFamily="Script MT Bold" FontSize="20" BorderThickness="1" Click="logout_Click"/>
+        <Button x:Name="save" Content="Save" Margin="10,10,670,0" VerticalAlignment="Top" Height="35" Background="#FF96C8FF" FontFamily="Script MT Bold" FontSize="20" BorderThickness="1" Click="save_Click"/>
+        <Button x:Name="reset" Content="Reset" Margin="127,10,553,0" VerticalAlignment="Top" Height="35" Background="#FF96C8FF" FontFamily="Script MT Bold" FontSize="20" BorderThickness="1" Click="reset_Click"/>
+        <Button x:Name="back" Content="Back to search" Margin="390,10,250,0" VerticalAlignment="Top" Width="130" Height="35" Background="#FF96DCFF" FontFamily="Script MT Bold" FontSize="20" BorderThickness="1" Click="back_Click"/>
+        <Button x:Name="my_home" Content="My Home" Margin="539,10,141,0" VerticalAlignment="Top" Height="35" Background="#FF96C8FF" FontFamily="Script MT Bold" FontSize="20" BorderThickness="1" Click="my_home_Click"/>
+
+        <Label x:Name="userFirstName" FontFamily="Script MT Bold" FontSize="20" VerticalContentAlignment="Center" Content="First Name:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,74,0,0" Height="35"/>
+        <Label x:Name="userLastName" FontFamily="Script MT Bold" FontSize="20" VerticalContentAlignment="Center" Content="Last Name:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,114,0,0" Height="35"/>
+        <Label x:Name="userEmail" FontFamily="Script MT Bold" FontSize="20" VerticalContentAlignment="Center" Content="Email:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,158,0,0" Height="35"/>
+        <Label x:Name="userNumber" FontFamily="Script MT Bold" FontSize="20" VerticalContentAlignment="Center" Content="Phone number:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,198,0,0" Height="35"/>
+        <Label x:Name="homeImage" FontFamily="Script MT Bold" FontSize="20" VerticalContentAlignment="Center" Content="Path to home's image:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,238,0,0" Height="35"/>
+        <Label x:Name="homeImagePreview" FontFamily="Script MT Bold" FontSize="20" VerticalContentAlignment="Center" Content="Image preview:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,285,0,0" Height="35"/>
+
+        <TextBox x:Name="firstNameBox" VerticalContentAlignment="Center" HorizontalAlignment="Left" Height="35" Margin="207,74,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="559">
+            <TextBox.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="10"/>
+                </Style>
+            </TextBox.Resources>
+        </TextBox>
+        <TextBox x:Name="lastNameBox" VerticalContentAlignment="Center" HorizontalAlignment="Left" Height="35" Margin="207,114,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="559">
+            <TextBox.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="10"/>
+                </Style>
+            </TextBox.Resources>
+        </TextBox>
+        <TextBox x:Name="emailBox" VerticalContentAlignment="Center" HorizontalAlignment="Left" Height="35" Margin="207,158,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="559">
+            <TextBox.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="10"/>
+                </Style>
+            </TextBox.Resources>
+        </TextBox>
+        <TextBox x:Name="numberBox" VerticalContentAlignment="Center" HorizontalAlignment="Left" Height="35" Margin="207,198,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="559">
+            <TextBox.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="10"/>
+                </Style>
+            </TextBox.Resources>
+        </TextBox>
+
+        <TextBox x:Name="imageBox" LostFocus="lostFocus" VerticalContentAlignment="Center" HorizontalAlignment="Left" Height="35" Margin="207,238,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="559">
+            <TextBox.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="10"/>
+                </Style>
+            </TextBox.Resources>
+        </TextBox>
+
+        <Image x:Name="image" HorizontalAlignment="Left" Height="150" Width="150" Margin="10,325,0,0" VerticalAlignment="Top"/>
+
+    </Grid>
+</Window>

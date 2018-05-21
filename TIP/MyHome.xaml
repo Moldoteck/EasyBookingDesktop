@@ -1,0 +1,54 @@
+﻿<Window x:Class="TIP.MyHome"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TIP"
+        mc:Ignorable="d"
+        Title="MyHome" Height="600" Width="800">
+    <Grid>
+        <Button x:Name="logout" Content="Log out" Margin="650,10,20,0" VerticalAlignment="Top" Width="110" Height="35" Background="#FF96DCFF" FontFamily="Script MT Bold" FontSize="20" BorderThickness="1" Click="logout_Click"/>
+        <Button x:Name="save" Content="Save" Margin="10,10,670,0" VerticalAlignment="Top" Height="35" Background="#FF96C8FF" FontFamily="Script MT Bold" FontSize="20" BorderThickness="1" Click="save_Click"/>
+        <Button x:Name="reset" Content="Reset" Margin="127,10,553,0" VerticalAlignment="Top" Height="35" Background="#FF96C8FF" FontFamily="Script MT Bold" FontSize="20" BorderThickness="1" Click="reset_Click"/>
+        <Button x:Name="back" Content="Back to search" Margin="390,10,250,0" VerticalAlignment="Top" Width="130" Height="35" Background="#FF96DCFF" FontFamily="Script MT Bold" FontSize="20" BorderThickness="1" Click="back_Click"/>
+        <Button x:Name="my_profile" Content="Profile" Margin="539,10,141,0" VerticalAlignment="Top" Height="35" Background="#FF96C8FF" FontFamily="Script MT Bold" FontSize="20" BorderThickness="1" Click="my_profile_Click"/>
+
+        <Label x:Name="homeName" FontFamily="Script MT Bold" FontSize="20" VerticalContentAlignment="Center" Content="Home's name:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,74,0,0" Height="35"/>
+        <Label x:Name="homeDescription" FontFamily="Script MT Bold" FontSize="20" VerticalContentAlignment="Center" Content="Home's description:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,114,0,0" Height="35"/>
+        <Label x:Name="homePrice" FontFamily="Script MT Bold" FontSize="20" VerticalContentAlignment="Center" Content="Home's price:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="18,249,0,0" Height="35"/>
+        <Label x:Name="homeImage" FontFamily="Script MT Bold" FontSize="20" VerticalContentAlignment="Center" Content="Path to home's image:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="18,289,0,0" Height="35"/>
+        <Label x:Name="homeImagePreview" FontFamily="Script MT Bold" FontSize="20" VerticalContentAlignment="Center" Content="Image preview:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="18,329,0,0" Height="35"/>
+
+        <TextBox x:Name="titleBox" VerticalContentAlignment="Center" HorizontalAlignment="Left" Height="35" Margin="207,74,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="559">
+            <TextBox.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="10"/>
+                </Style>
+            </TextBox.Resources>
+        </TextBox>
+        <TextBox x:Name="descriptionBox" VerticalContentAlignment="Center" HorizontalAlignment="Left" Height="90" Margin="18,154,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="748">
+            <TextBox.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="10"/>
+                </Style>
+            </TextBox.Resources>
+        </TextBox>
+        <TextBox x:Name="priceBox" VerticalContentAlignment="Center" HorizontalAlignment="Left" Height="35" Margin="207,249,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="559">
+            <TextBox.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="10"/>
+                </Style>
+            </TextBox.Resources>
+        </TextBox>
+        <TextBox x:Name="imageBox" LostFocus="lostFocus" VerticalContentAlignment="Center" HorizontalAlignment="Left" Height="35" Margin="207,289,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="559">
+            <TextBox.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="10"/>
+                </Style>
+            </TextBox.Resources>
+        </TextBox>
+        
+        <Image x:Name="image" HorizontalAlignment="Left" Height="150" Width="150" Margin="18,369,0,0" VerticalAlignment="Top"/>
+
+    </Grid>
+</Window>

@@ -1,0 +1,64 @@
+﻿<Window x:Class="TIP.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TIP"
+        mc:Ignorable="d"
+        Title="EasyBooking" Height="600" Width="800" FontFamily="Script MT Bold">
+    <Grid>
+        <Button x:Name="login" Content="Log in" HorizontalAlignment="Center" Margin="275,375,277,0" VerticalAlignment="Top" Width="230" Height="70" Background="#FF96DCFF" FontFamily="Script MT Bold" FontSize="40" BorderThickness="1" Click="login_Click"/>
+        <Button x:Name="register" Content="Register" HorizontalAlignment="Center" Margin="275,450,277,0" VerticalAlignment="Top" Width="230" Height="70" Background="#FF96DCFF" FontFamily="Script MT Bold" FontSize="40" BorderThickness="1" Click="register_Click"/>
+        <TextBox x:Name="username" HorizontalAlignment="Center" Height="70" Margin="275,183,277,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="230" BorderThickness="1" FontSize="30" FontFamily="Times New Roman" TextAlignment="Center">
+            <TextBox.Style>
+                <Style xmlns:sys="clr-namespace:System;assembly=mscorlib" TargetType="{x:Type TextBox}">
+                    <Style.Resources>
+                        <VisualBrush x:Key="CueBannerBrush"  AlignmentX="Left" AlignmentY="Center" Stretch="None">
+                            <VisualBrush.Visual>
+                                <Label Content="            Username" Foreground="#777777" Background="White" Height="35" Width="230" HorizontalAlignment="Center" FontSize="20"/>
+                            </VisualBrush.Visual>
+                        </VisualBrush>
+                    </Style.Resources>
+                    <Style.Triggers>
+                        <Trigger Property="Text" Value="{x:Static sys:String.Empty}">
+                            <Setter Property="Background" Value="{StaticResource CueBannerBrush}" />
+                        </Trigger>
+                        <Trigger Property="Text" Value="{x:Null}">
+                            <Setter Property="Background" Value="{StaticResource CueBannerBrush}" />
+                        </Trigger>
+                        <Trigger Property="IsKeyboardFocused" Value="True">
+                            <Setter Property="Background" Value="White" />
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </TextBox.Style>
+        </TextBox>
+        <TextBox x:Name="password" HorizontalAlignment="Center" Height="70" Margin="275,258,277,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="230" BorderThickness="1" TextAlignment="Center" FontFamily="Times New Roman" FontSize="30">
+            <TextBox.Style>
+                <Style xmlns:sys="clr-namespace:System;assembly=mscorlib" TargetType="{x:Type TextBox}">
+                    <Style.Resources>
+                        <VisualBrush x:Key="CueBannerBrush"  AlignmentX="Left" AlignmentY="Center" Stretch="None">
+                            <VisualBrush.Visual>
+                                <Label Content="             Password" Foreground="#777777" Background="White" Height="35" Width="230" FontSize="20"/>
+                            </VisualBrush.Visual>
+                        </VisualBrush>
+                    </Style.Resources>
+                    <Style.Triggers>
+                        <Trigger Property="Text" Value="{x:Static sys:String.Empty}">
+                            <Setter Property="Background" Value="{StaticResource CueBannerBrush}" />
+                        </Trigger>
+                        <Trigger Property="Text" Value="{x:Null}">
+                            <Setter Property="Background" Value="{StaticResource CueBannerBrush}" />
+                        </Trigger>
+                        <Trigger Property="IsKeyboardFocused" Value="True">
+                            <Setter Property="Background" Value="White" />
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </TextBox.Style>
+        </TextBox>
+        <Label x:Name="label" Content="Easy Booking" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,33,0,0" FontSize="60"/>
+        <Label x:Name="label1" Content="" HorizontalAlignment="Left" Margin="280,333,0,0" VerticalAlignment="Top" Width="230" Height="37" FontSize="20"/>
+
+    </Grid>
+</Window>
